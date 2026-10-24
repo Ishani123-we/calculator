@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frosted Glass Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating blurred background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <main class="calculator" aria-label="Calculator">
+    <!-- Display: previous expression (small) + current input (large) -->
+    <section class="display" aria-live="polite">
+      <div class="previous" id="previous"></div>
+      <div class="current" id="current">0</div>
+      <div class="preview" id="preview"></div>
+    </section>
+
+    <!-- Buttons: data-action / data-value drive the logic in script.js -->
+    <section class="keys">
+      <button class="btn fn" data-action="clear" data-key="Escape">C</button>
+      <button class="btn fn" data-action="delete" data-key="Backspace">⌫</button>
+      <button class="btn fn" data-action="percent" data-key="%">%</button>
+      <button class="btn op" data-op="÷" data-key="/">÷</button>
+
+      <button class="btn num" data-value="7" data-key="7">7</button>
+      <button class="btn num" data-value="8" data-key="8">8</button>
+      <button class="btn num" data-value="9" data-key="9">9</button>
+      <button class="btn op" data-op="×" data-key="*">×</button>
+
+      <button class="btn num" data-value="4" data-key="4">4</button>
+      <button class="btn num" data-value="5" data-key="5">5</button>
+      <button class="btn num" data-value="6" data-key="6">6</button>
+      <button class="btn op" data-op="−" data-key="-">−</button>
+
+      <button class="btn num" data-value="1" data-key="1">1</button>
+      <button class="btn num" data-value="2" data-key="2">2</button>
+      <button class="btn num" data-value="3" data-key="3">3</button>
+      <button class="btn op" data-op="+" data-key="+">+</button>
+
+      <button class="btn num zero" data-value="0" data-key="0">0</button>
+      <button class="btn num" data-value="." data-key=".">.</button>
+      <button class="btn equals" data-action="equals" data-key="Enter">=</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
